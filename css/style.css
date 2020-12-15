@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #f3f055;
+    --black: #1f1e1e;
+    --width-break:600px
+}
+
+body{
+    margin: 0;
+    background-color: orange;
+}
+
+textarea{
+    box-sizing: border-box;
+    display: block;
+    width:100%;
+    font-family: inherit;
+}
+
+.btn-primary{
+    border: none;
+    padding: 1rem 2rem;
+    margin: 1rem 0rem;
+    font-size: large;
+    background-color: var(--primary);
+}
+
+#text-output{
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 10vh;
+    max-height: 20vh;
+    overflow: scroll;
+    border: 1px solid var(--black);
+}
+

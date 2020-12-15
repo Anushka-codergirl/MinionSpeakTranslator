@@ -4,9 +4,11 @@ var greetingMsg = "Welcome! " + username;
 
 alert(greetingMsg);
 
-var submitButton = document.querySelector("#submit");
+var submitButton = document.querySelector("#input-btn");
 
-var textInput = document.querySelector("#input-text");
+var textInput = document.querySelector("#text-translator");
+
+var translateOutput = document.querySelector("#text-output");
 
 console.log(textInput);
 
@@ -16,3 +18,4 @@ function clickHandler(){
 }
 
 submitButton.addEventListener("click",clickHandler);
+
