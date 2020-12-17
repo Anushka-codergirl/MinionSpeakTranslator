@@ -12,17 +12,10 @@ var translateOutput = document.querySelector("#text-output");
 
 console.log(textInput);
 
-
-
-submitButton.addEventListener("click",clickHandler);
-
 var textOutput = document.querySelector("#text-output");
 
-textOutput.innerText = "Some output";
-
-
 function clickHandler(){
-    console.log("clicked");
-    console.log("input",textInput.value);
-    console.log(textOutput); 
+    textOutput.innerText = "dfdfdf" + textInput.value;
 }
+
+submitButton.addEventListener("click",clickHandler);
