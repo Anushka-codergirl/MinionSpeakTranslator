@@ -4,4 +4,4 @@ Stack used:
 - HTML
 - CSS
 - Javascript
-Made using Funtranslations API
+- Fun translations API
