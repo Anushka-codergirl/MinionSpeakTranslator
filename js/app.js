@@ -8,6 +8,8 @@ alert(greetingMsg);
 
 var submitButton = document.querySelector("#submit-btn");
 
+var resetButton = document.querySelector("#reset-btn");
+
 var translateInput = document.querySelector("#tt-input");
 
 var translateOutput = document.querySelector("#tt-output");
@@ -22,8 +24,8 @@ function getTranslationURL(input){
 
 //Error Handling
 function errorHandler(error){
-    console.log("Error!",error);
-    alert("Please check the server connection");
+    console.log("Error occured!",error);
+    alert("Please check the server connection or try again after an hour.");
 }
 
 //Click Handler
@@ -37,10 +39,12 @@ function clickHandler(){
    // Fetch the URL
 
    fetch(getTranslationURL(inputText)).then(response => response.json()).then(json => 
-   {
-     
-     translateOutput.innerText = json.contents.translated;
-   }).catch(errorHandler);
+     translateOutput.innerText = json.contents.translated).catch(errorHandler)
 }
 
 submitButton.addEventListener("click",clickHandler);
+
+resetButton.addEventListener("click",() =>{
+  translateInput.value = "";
+  translateOutput.innerText = "";
+});

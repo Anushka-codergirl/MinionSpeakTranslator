@@ -1,10 +1,15 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+*{
     box-sizing: border-box;
 }
 
 :root {
-    --primary: #fcf824;
-    --secondary:#f1f1ec;
+    --primary: #f3f04def;
+    --secondary:#d2deee;
+    --button:#4488cc;
     --black: #1f1e1e;
     --white:#ffffff;
     --width-break:600px;
@@ -13,75 +18,100 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--secondary);
+    font-family: 'Satisfy', cursive;
+    background-color: var(--white);
 }
 
 /*Nav Bar */
-nav {
+.nav {
     background-color: var(--primary);
+    padding: 0.5rem 0.5rem;
 }
 
 .nav .active-link {
-    color: rgb(216, 55, 55);
+    color: var(--button);
+    font-weight: bolder;
 }
 .nav .brand {
     font-weight: bolder;
-    color: var(--black);
+    font-size: 28px;
+    font-family: 'Bungee Outline', cursive;
+}
+
+.nav ul{
+    text-align: right;
 }
 .nav li {
     display: inline;
-    margin-left: 5px;
+    padding: 0rem 0.5rem;
+}
+
+.heading{
+    margin-top: 20px;
+    padding: 2rem;
+    text-align: center;
+}
+.hero {
+    max-width: 470px;
+    max-height: 400px;
+    margin: auto;
+    display: block;
 }
 
 main{
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin: auto;
+    padding: 1.5rem;
+    max-width: var(--width-break);
 }
 
 textarea{
     box-sizing: border-box;
     display: block;
+    background-color: var(--secondary);
     width:100%;
-    min-height: 20vh;
+    min-height: 30vh;
     margin-top: 2rem;
     font-size: large;
     font-family: inherit;
+    border: 2px solid var(--black);
 }
 
 .btn-primary{
     border: none;
-    padding: 0.5rem 0.5rem;
-    border-radius: 15px;
-    margin: 1rem 0rem;
+    outline: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 3px;
+    margin: 0rem 1rem 1rem 0rem;
     font-size: large;
-    background-color: var(--primary);
+    font-family: inherit;
+    background-color: var(--button);
 }
 
 #tt-output{
     box-sizing: border-box;
     width: 100%;
     padding: 1rem;
-    min-height: 20vh;
+    min-height: 30vh;
     margin-top: 2rem;
     font-size: large;
-    font-family: inherit;
     overflow: scroll;
-    border: 1px solid var(--black);
-    background-color: var(--white);
+    border: 2px solid var(--black);
+    background-color: var(--secondary);
 }
 
 footer {
     text-align: center;
+  
 }
 
 footer li {
     list-style: none;
     padding: 0.5rem;
-    display: inline;
-    color: var(--secondary-dark);
+    display: inline;  
 }
-
 
 footer p,a{    
     position: left;   
+    text-decoration: none;
+    color: var(--button);
 }
